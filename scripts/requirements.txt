@@ -1,0 +1,6 @@
+xhtml2pdf
+requests
+pdfkit
+WeasyPrint
+pyppeteer
+playwright
