@@ -2,7 +2,7 @@ import argparse
 from xhtml2pdf import pisa
 import requests
 
-async def url_to_pdf(url, pdf_path):
+def url_to_pdf(url, pdf_path):
     # Fetch the HTML content from the URL
     response = requests.get(url)
     if response.status_code != 200:
@@ -15,7 +15,7 @@ async def url_to_pdf(url, pdf_path):
     return not pisa_status.err
 
 
-async def html_to_pdf(html_content, pdf_path):
+def html_to_pdf(html_content, pdf_path):
     with open(pdf_path, "wb") as pdf_file:
         pisa_status = pisa.CreatePDF(html_string, dest=pdf_file)    
     return not pisa_status.err

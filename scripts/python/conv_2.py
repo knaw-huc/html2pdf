@@ -43,5 +43,5 @@ if __name__ == "__main__":
             html_to_pdf(html_content, pdf_path)
     elif url!='nothing':
         pdf_path = url.replace('.html','.pdf')
-        url_to_pdf(url_to_fetch, pdf_path)
+        url_to_pdf(url, pdf_path)
  
